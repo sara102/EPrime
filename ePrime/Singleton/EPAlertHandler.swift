@@ -16,7 +16,7 @@ class EPAlertHandler {
         
         // Configuration
         // ...
-    /// 
+    
         return presenter
     }()
     
