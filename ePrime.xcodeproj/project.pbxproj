@@ -7,21 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D518264B206D23480040F773 /* EPAlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D518264A206D23480040F773 /* EPAlertHandler.swift */; };
+		D5325BDF205EFA5200DE2FD9 /* EPPackStickerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5325BDE205EFA5200DE2FD9 /* EPPackStickerDetails.swift */; };
 		D54329812057012300A1E39D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54329802057012300A1E39D /* AppDelegate.swift */; };
-		D54329832057012300A1E39D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54329822057012300A1E39D /* ViewController.swift */; };
+		D54329832057012300A1E39D /* EPLandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54329822057012300A1E39D /* EPLandingViewController.swift */; };
 		D54329862057012300A1E39D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D54329842057012300A1E39D /* Main.storyboard */; };
 		D54329882057012300A1E39D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D54329872057012300A1E39D /* Assets.xcassets */; };
 		D543298B2057012300A1E39D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D54329892057012300A1E39D /* LaunchScreen.storyboard */; };
+		D54329D0205826C500A1E39D /* EPLicensedGrowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54329CF205826C500A1E39D /* EPLicensedGrowersViewController.swift */; };
+		D54329D32058280A00A1E39D /* LicensedGrowersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54329D22058280A00A1E39D /* LicensedGrowersCollectionViewCell.swift */; };
+		D56B6EE8206068D300773197 /* EPPackStickerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56B6EE7206068D300773197 /* EPPackStickerDetailsViewController.swift */; };
+		D56B6EEB2061B1E400773197 /* EPPackStickerCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56B6EEA2061B1E400773197 /* EPPackStickerCellTableViewCell.swift */; };
+		D58EAE38206BB1B200E6BAC0 /* EPLicensedGrowers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58EAE37206BB1B200E6BAC0 /* EPLicensedGrowers.swift */; };
+		E028AE0D7F5A2342F2AC0814 /* Pods_ePrime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7681644EF1B1F38697CA8F7E /* Pods_ePrime.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2291CC2F83B53CD45D1F4D37 /* Pods-ePrime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ePrime.release.xcconfig"; path = "Pods/Target Support Files/Pods-ePrime/Pods-ePrime.release.xcconfig"; sourceTree = "<group>"; };
+		752A0B6C7CD53D1E4EBF687E /* Pods-ePrime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ePrime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ePrime/Pods-ePrime.debug.xcconfig"; sourceTree = "<group>"; };
+		7681644EF1B1F38697CA8F7E /* Pods_ePrime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ePrime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D518264A206D23480040F773 /* EPAlertHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPAlertHandler.swift; sourceTree = "<group>"; };
+		D5325BDE205EFA5200DE2FD9 /* EPPackStickerDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPPackStickerDetails.swift; sourceTree = "<group>"; };
 		D543297D2057012300A1E39D /* ePrime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ePrime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D54329802057012300A1E39D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D54329822057012300A1E39D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D54329822057012300A1E39D /* EPLandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPLandingViewController.swift; sourceTree = "<group>"; };
 		D54329852057012300A1E39D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D54329872057012300A1E39D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D543298A2057012300A1E39D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D543298C2057012300A1E39D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D54329CF205826C500A1E39D /* EPLicensedGrowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPLicensedGrowersViewController.swift; sourceTree = "<group>"; };
+		D54329D22058280A00A1E39D /* LicensedGrowersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicensedGrowersCollectionViewCell.swift; sourceTree = "<group>"; };
+		D56B6EE7206068D300773197 /* EPPackStickerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPPackStickerDetailsViewController.swift; sourceTree = "<group>"; };
+		D56B6EEA2061B1E400773197 /* EPPackStickerCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPPackStickerCellTableViewCell.swift; sourceTree = "<group>"; };
+		D58EAE37206BB1B200E6BAC0 /* EPLicensedGrowers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPLicensedGrowers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +47,54 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E028AE0D7F5A2342F2AC0814 /* Pods_ePrime.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0079B8058869FA80955451D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7681644EF1B1F38697CA8F7E /* Pods_ePrime.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		47842646E1E4D7233713C9F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				752A0B6C7CD53D1E4EBF687E /* Pods-ePrime.debug.xcconfig */,
+				2291CC2F83B53CD45D1F4D37 /* Pods-ePrime.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D5182649206D23210040F773 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				D518264A206D23480040F773 /* EPAlertHandler.swift */,
+			);
+			path = Singleton;
+			sourceTree = "<group>";
+		};
+		D5325BE0205EFB5B00DE2FD9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D5325BDE205EFA5200DE2FD9 /* EPPackStickerDetails.swift */,
+				D58EAE37206BB1B200E6BAC0 /* EPLicensedGrowers.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		D54329742057012300A1E39D = {
 			isa = PBXGroup;
 			children = (
 				D543297F2057012300A1E39D /* ePrime */,
 				D543297E2057012300A1E39D /* Products */,
+				47842646E1E4D7233713C9F9 /* Pods */,
+				0079B8058869FA80955451D3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +109,36 @@
 		D543297F2057012300A1E39D /* ePrime */ = {
 			isa = PBXGroup;
 			children = (
+				D5182649206D23210040F773 /* Singleton */,
+				D56B6EE92061B1BE00773197 /* Pack sticker cell detials */,
+				D5325BE0205EFB5B00DE2FD9 /* Models */,
+				D54329D1205827E800A1E39D /* Licensed Growers CollectionView */,
 				D54329802057012300A1E39D /* AppDelegate.swift */,
-				D54329822057012300A1E39D /* ViewController.swift */,
+				D54329CF205826C500A1E39D /* EPLicensedGrowersViewController.swift */,
+				D56B6EE7206068D300773197 /* EPPackStickerDetailsViewController.swift */,
+				D54329822057012300A1E39D /* EPLandingViewController.swift */,
 				D54329842057012300A1E39D /* Main.storyboard */,
 				D54329872057012300A1E39D /* Assets.xcassets */,
 				D54329892057012300A1E39D /* LaunchScreen.storyboard */,
 				D543298C2057012300A1E39D /* Info.plist */,
 			);
 			path = ePrime;
+			sourceTree = "<group>";
+		};
+		D54329D1205827E800A1E39D /* Licensed Growers CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				D54329D22058280A00A1E39D /* LicensedGrowersCollectionViewCell.swift */,
+			);
+			path = "Licensed Growers CollectionView";
+			sourceTree = "<group>";
+		};
+		D56B6EE92061B1BE00773197 /* Pack sticker cell detials */ = {
+			isa = PBXGroup;
+			children = (
+				D56B6EEA2061B1E400773197 /* EPPackStickerCellTableViewCell.swift */,
+			);
+			path = "Pack sticker cell detials";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +148,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D543298F2057012300A1E39D /* Build configuration list for PBXNativeTarget "ePrime" */;
 			buildPhases = (
+				B12D3222E781CEAEEEFB6251 /* [CP] Check Pods Manifest.lock */,
 				D54329792057012300A1E39D /* Sources */,
 				D543297A2057012300A1E39D /* Frameworks */,
 				D543297B2057012300A1E39D /* Resources */,
+				73F8E101917B9F7BE7EDF44E /* [CP] Embed Pods Frameworks */,
+				4147C13D389E35E0669C51E1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,13 +211,82 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4147C13D389E35E0669C51E1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ePrime/Pods-ePrime-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73F8E101917B9F7BE7EDF44E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ePrime/Pods-ePrime-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ARSLineProgress/ARSLineProgress.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftQRScanner/SwiftQRScanner.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ARSLineProgress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftQRScanner.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ePrime/Pods-ePrime-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B12D3222E781CEAEEEFB6251 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ePrime-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D54329792057012300A1E39D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D54329832057012300A1E39D /* ViewController.swift in Sources */,
+				D5325BDF205EFA5200DE2FD9 /* EPPackStickerDetails.swift in Sources */,
+				D54329D0205826C500A1E39D /* EPLicensedGrowersViewController.swift in Sources */,
+				D54329832057012300A1E39D /* EPLandingViewController.swift in Sources */,
+				D56B6EE8206068D300773197 /* EPPackStickerDetailsViewController.swift in Sources */,
+				D56B6EEB2061B1E400773197 /* EPPackStickerCellTableViewCell.swift in Sources */,
+				D54329D32058280A00A1E39D /* LicensedGrowersCollectionViewCell.swift in Sources */,
 				D54329812057012300A1E39D /* AppDelegate.swift in Sources */,
+				D58EAE38206BB1B200E6BAC0 /* EPLicensedGrowers.swift in Sources */,
+				D518264B206D23480040F773 /* EPAlertHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +366,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = "";
 			};
 			name = Debug;
 		};
@@ -266,37 +416,46 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		D54329902057012300A1E39D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 752A0B6C7CD53D1E4EBF687E /* Pods-ePrime.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J735YB6Q35;
 				INFOPLIST_FILE = ePrime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = singleclic.ePrime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		D54329912057012300A1E39D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2291CC2F83B53CD45D1F4D37 /* Pods-ePrime.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J735YB6Q35;
 				INFOPLIST_FILE = ePrime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = singleclic.ePrime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

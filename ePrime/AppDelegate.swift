@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ARSLineProgress
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        // Sets shadow (line below the bar) to a blank image
+        UINavigationBar.appearance().shadowImage = UIImage()
+        // Sets the translucent background color
+        UINavigationBar.appearance().backgroundColor = .clear
+        // Set translucent. (Default value is already true, so this can be removed if desired.)
+        UINavigationBar.appearance().isTranslucent = true
         // Override point for customization after application launch.
+        
+        self.setupAppLoadingIndicator()
+        
+            
+        
         return true
     }
 
@@ -41,6 +54,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func setupAppLoadingIndicator()
+    {
+        ARSLineProgressConfiguration.circleColorMiddle = UIColor.init(red: 248/255, green: 251/255, blue: 244/255, alpha: 1).cgColor
+        ARSLineProgressConfiguration.circleColorInner = UIColor.init(red: 94/255, green: 150/255, blue: 24/255, alpha: 1).cgColor
+        ARSLineProgressConfiguration.circleColorOuter =  UIColor.init(red: 108/255, green: 21/255, blue: 17/255, alpha: 1).cgColor
+    }
 }
 
