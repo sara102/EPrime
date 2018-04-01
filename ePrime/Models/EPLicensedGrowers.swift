@@ -29,7 +29,7 @@ class EPLicensedGrowers: Mappable {
         exportName <- map["ExportName"]
         farmID <- map["FarmID"]
         grower <- map["Grower"]
-        variety <- map["variety"]
+        variety <- map["Variety"]
     }
     
     public class func fetchEPLicensedGrowers(completionHandler:@escaping ((_ licensedGrowers:Array<EPLicensedGrowers>?,_ errorMessage:String?) -> Void) ) -> Void
@@ -50,7 +50,22 @@ class EPLicensedGrowers: Mappable {
             }
             else
             {
-                completionHandler (nil,"")
+                if let _ = response.result.value
+                {
+                    let error = (response.result.value  as? [String : String])
+                    if let _ = error
+                    {
+                        completionHandler (nil,error!["Message"] ?? nil)
+                    }
+                    else
+                    {
+                        completionHandler (nil,nil)
+                    }
+                }
+                else
+                {
+                    completionHandler (nil,nil)
+                }
             }
             
     }

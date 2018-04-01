@@ -49,43 +49,43 @@ class EPPackStickerDetails: Mappable {
         NoDataMessage <- map["NoDataMessage"]
 
     }
-    public class func fetchEPPackStickerDetails(withQRCode:String,completionHandler:@escaping ((_ stickerDetails:EPPackStickerDetails?) -> Void) ) -> Void
+    public class func fetchEPPackStickerDetails(withQRCode:String,completionHandler:@escaping ((_ stickerDetails:EPPackStickerDetails?,_ errorMessage:String?) -> Void) ) -> Void
     {
         let url = kPackStickerURL + withQRCode
         Alamofire.request(url).responseJSON { (response) in
             if response.response?.statusCode == 200 {
-                print("Success with JSON: \(String(describing: response.result.value))")
-                
+                if let _ = response.result.value
+                {
+                    let stickerDetails: EPPackStickerDetails = Mapper<EPPackStickerDetails>().map(JSON:response.result.value as! [String:Any])!
+                    completionHandler (stickerDetails,nil)
+                }
+                else
+                {
+                    completionHandler (nil,nil)
+                }
             }
             else {
-                let error = (response.result.value  as? [String : AnyObject])
-                    print (error!["Message"])
+                if let _ = response.result.value
+                {
+                    let error = (response.result.value  as? [String : String])
+                    if let _ = error
+                    {
+                        completionHandler (nil,error!["Message"] ?? nil)
+                    }
+                    else
+                    {
+                        completionHandler (nil,nil)
+                    }
+                }
+                else
+                {
+                    completionHandler (nil,nil)
                 }
         }
 
-//        Alamofire.request(url).responseObject { (response: DataResponse<EPPackStickerDetails>) in
-//            if response.response?.statusCode == 200
-//            {
-//                if let _ = response.value
-//                {
-//
-//                    completionHandler (response.value!)
-//                }
-//                else
-//                {
-//                    completionHandler (nil)
-//                }
-//            }
-//            else
-//            {
-//                let error = response.result.value?.toJSON() as! NSDictionary
-////                let errorMessage = error.objectForKey("message") as! String
-//
-//                completionHandler (nil)
-//            }
-//        }
 
         
         
+    }
     }
 }

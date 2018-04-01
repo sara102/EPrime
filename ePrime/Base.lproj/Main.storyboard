@@ -171,41 +171,6 @@
                                                     <rect key="frame" x="12" y="0.0" width="343" height="150"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Khaled Hegazy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUn-cU-LJu">
-                                                    <rect key="frame" x="20" y="20" width="315" height="23"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
-                                                    <color key="textColor" red="0.38089993596076965" green="0.075003720819950104" blue="0.058178745210170746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hegazy Farm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ZD-bT-jAU">
-                                                    <rect key="frame" x="20" y="49" width="315" height="21"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Egyptian Fruit Export (EFE)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMI-qL-axY">
-                                                    <rect key="frame" x="20" y="76" width="315" height="19.5"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WAFRA For Export and Agricultural Production" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GfE-qm-jbB">
-                                                    <rect key="frame" x="20" y="101" width="170" height="38.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="226" id="BlW-pz-Ide"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.39995324609999999" green="0.40002685789999998" blue="0.39994865660000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3L-H1-RTG">
-                                                    <rect key="frame" x="273.5" y="101" width="61.5" height="38.5"/>
-                                                    <string key="text">Prime 
-Starlight</string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.34387430548667908" green="0.53025704622268677" blue="0.089483179152011871" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <view alpha="0.45000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d3a-eQ-Fy2">
                                                     <rect key="frame" x="0.0" y="0.0" width="12" height="150"/>
                                                     <color key="backgroundColor" red="0.49518382550000001" green="0.74374020100000005" blue="0.1447460055" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -213,43 +178,105 @@ Starlight</string>
                                                         <constraint firstAttribute="width" constant="12" id="xgw-PB-NHD"/>
                                                     </constraints>
                                                 </view>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zYV-cs-9sc">
+                                                    <rect key="frame" x="22" y="10" width="333" height="140"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="Khaled Hegazy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUn-cU-LJu">
+                                                            <rect key="frame" x="0.0" y="0.0" width="333" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="sKV-mR-1Js"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
+                                                            <color key="textColor" red="0.38089993596076965" green="0.075003720819950104" blue="0.058178745210170746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="Hegazy Farm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ZD-bT-jAU">
+                                                            <rect key="frame" x="0.0" y="30" width="333" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="SNe-AS-7Sm"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Egyptian Fruit Export (EFE)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMI-qL-axY">
+                                                            <rect key="frame" x="0.0" y="60" width="333" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="7ZE-Gp-me4"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mGD-SE-Dhd">
+                                                            <rect key="frame" x="0.0" y="90" width="333" height="50"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5f-D1-UX2">
+                                                                    <rect key="frame" x="259" y="0.0" width="64" height="50"/>
+                                                                    <string key="text">Prime 
+Starlight</string>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                    <color key="textColor" red="0.34387430549999998" green="0.53025704620000003" blue="0.089483179149999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WAFRA For Export and Agricultural Production" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="580-b6-2S3">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="170" height="49.5"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="305-bO-V30"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                    <color key="textColor" red="0.39995324609999999" green="0.40002685789999998" blue="0.39994865660000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="F5f-D1-UX2" secondAttribute="trailing" constant="10" id="2cT-Cq-XRp"/>
+                                                                <constraint firstItem="580-b6-2S3" firstAttribute="leading" secondItem="mGD-SE-Dhd" secondAttribute="leading" id="91X-Cb-xOh"/>
+                                                                <constraint firstAttribute="bottom" secondItem="580-b6-2S3" secondAttribute="bottom" id="DVE-GJ-sdH"/>
+                                                                <constraint firstItem="F5f-D1-UX2" firstAttribute="centerY" secondItem="580-b6-2S3" secondAttribute="centerY" id="Pua-5m-Kkg"/>
+                                                                <constraint firstItem="580-b6-2S3" firstAttribute="top" secondItem="mGD-SE-Dhd" secondAttribute="top" id="Vq9-zC-w9n"/>
+                                                                <constraint firstItem="F5f-D1-UX2" firstAttribute="top" secondItem="mGD-SE-Dhd" secondAttribute="top" id="WcS-Wc-RU5"/>
+                                                                <constraint firstItem="580-b6-2S3" firstAttribute="centerY" secondItem="mGD-SE-Dhd" secondAttribute="centerY" id="bgn-cy-1ga"/>
+                                                                <constraint firstItem="F5f-D1-UX2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="580-b6-2S3" secondAttribute="trailing" constant="64.5" id="oK3-KD-5OH"/>
+                                                                <constraint firstAttribute="bottom" secondItem="F5f-D1-UX2" secondAttribute="bottom" id="qAe-ZW-YBu"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="mGD-SE-Dhd" secondAttribute="bottom" id="6UG-1w-oQ9"/>
+                                                        <constraint firstItem="mGD-SE-Dhd" firstAttribute="leading" secondItem="zYV-cs-9sc" secondAttribute="leading" id="DgN-IQ-WLB"/>
+                                                        <constraint firstItem="mGD-SE-Dhd" firstAttribute="top" secondItem="IMI-qL-axY" secondAttribute="bottom" id="OlC-IS-YZF"/>
+                                                        <constraint firstAttribute="trailing" secondItem="mGD-SE-Dhd" secondAttribute="trailing" id="gYv-1l-mfT"/>
+                                                    </constraints>
+                                                </stackView>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="zYV-cs-9sc" firstAttribute="leading" secondItem="kOE-Es-pmN" secondAttribute="leading" constant="10" id="1dX-uj-qzW"/>
                                             <constraint firstItem="kOE-Es-pmN" firstAttribute="trailing" secondItem="K6o-ai-4PH" secondAttribute="trailing" id="2sc-ue-Rl0"/>
                                             <constraint firstItem="d3a-eQ-Fy2" firstAttribute="leading" secondItem="mVp-2K-5tG" secondAttribute="leading" id="5Hz-3h-B1W"/>
-                                            <constraint firstItem="GfE-qm-jbB" firstAttribute="top" secondItem="IMI-qL-axY" secondAttribute="bottom" constant="6" id="6Kh-zN-vxt"/>
-                                            <constraint firstItem="GfE-qm-jbB" firstAttribute="leading" secondItem="IMI-qL-axY" secondAttribute="leading" id="BDz-G5-JoY"/>
                                             <constraint firstItem="kOE-Es-pmN" firstAttribute="top" secondItem="K6o-ai-4PH" secondAttribute="top" id="CDI-3V-e4w"/>
-                                            <constraint firstItem="5ZD-bT-jAU" firstAttribute="trailing" secondItem="LUn-cU-LJu" secondAttribute="trailing" id="CVU-bn-zn4"/>
-                                            <constraint firstItem="LUn-cU-LJu" firstAttribute="leading" secondItem="mVp-2K-5tG" secondAttribute="leadingMargin" constant="12" id="E1c-f0-VhY"/>
                                             <constraint firstAttribute="bottom" secondItem="K6o-ai-4PH" secondAttribute="bottom" id="G2q-cw-AdT"/>
                                             <constraint firstItem="K6o-ai-4PH" firstAttribute="leading" secondItem="mVp-2K-5tG" secondAttribute="leading" id="JVQ-UH-nWQ"/>
+                                            <constraint firstItem="zYV-cs-9sc" firstAttribute="trailing" secondItem="kOE-Es-pmN" secondAttribute="trailing" id="OAD-72-KLi"/>
                                             <constraint firstAttribute="trailing" secondItem="K6o-ai-4PH" secondAttribute="trailing" id="PI6-BC-9wR"/>
                                             <constraint firstItem="kOE-Es-pmN" firstAttribute="bottom" secondItem="K6o-ai-4PH" secondAttribute="bottom" id="RvL-cg-Dha"/>
-                                            <constraint firstItem="5ZD-bT-jAU" firstAttribute="leading" secondItem="LUn-cU-LJu" secondAttribute="leading" id="S8c-e5-cH5"/>
-                                            <constraint firstItem="IMI-qL-axY" firstAttribute="trailing" secondItem="5ZD-bT-jAU" secondAttribute="trailing" id="Td9-39-v9J"/>
                                             <constraint firstAttribute="bottom" secondItem="d3a-eQ-Fy2" secondAttribute="bottom" id="Tkm-01-NdR"/>
-                                            <constraint firstItem="5ZD-bT-jAU" firstAttribute="top" secondItem="LUn-cU-LJu" secondAttribute="bottom" constant="6" id="ZO0-WU-Dn7"/>
-                                            <constraint firstItem="n3L-H1-RTG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mVp-2K-5tG" secondAttribute="leadingMargin" id="aDh-yJ-PeS"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="n3L-H1-RTG" secondAttribute="trailing" constant="12" id="cPG-31-9Hw"/>
-                                            <constraint firstItem="LUn-cU-LJu" firstAttribute="top" secondItem="mVp-2K-5tG" secondAttribute="topMargin" constant="12" id="ev5-6a-eI1"/>
-                                            <constraint firstItem="IMI-qL-axY" firstAttribute="top" secondItem="5ZD-bT-jAU" secondAttribute="bottom" constant="6" id="oca-ad-DwC"/>
+                                            <constraint firstItem="zYV-cs-9sc" firstAttribute="top" secondItem="kOE-Es-pmN" secondAttribute="top" constant="10" id="dKi-aD-e99"/>
+                                            <constraint firstItem="zYV-cs-9sc" firstAttribute="bottom" secondItem="kOE-Es-pmN" secondAttribute="bottom" priority="250" id="oER-8e-0uy"/>
                                             <constraint firstItem="d3a-eQ-Fy2" firstAttribute="top" secondItem="mVp-2K-5tG" secondAttribute="top" id="okV-oz-QpB"/>
-                                            <constraint firstItem="IMI-qL-axY" firstAttribute="leading" secondItem="5ZD-bT-jAU" secondAttribute="leading" id="sUh-EC-Ttn"/>
                                             <constraint firstItem="kOE-Es-pmN" firstAttribute="leading" secondItem="d3a-eQ-Fy2" secondAttribute="trailing" id="ulI-h8-byz"/>
-                                            <constraint firstItem="n3L-H1-RTG" firstAttribute="centerY" secondItem="GfE-qm-jbB" secondAttribute="centerY" id="vQ8-7p-JZ6"/>
                                             <constraint firstItem="K6o-ai-4PH" firstAttribute="top" secondItem="mVp-2K-5tG" secondAttribute="top" id="yec-Nj-r9D"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GfE-qm-jbB" secondAttribute="trailing" symbolic="YES" id="zd1-KA-qcr"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="LUn-cU-LJu" secondAttribute="trailing" constant="12" id="zlk-Ep-CPe"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="bridgeExportCompanyLabel" destination="n3L-H1-RTG" id="c14-pY-sB0"/>
+                                            <outlet property="bridgeExportCompanyLabel" destination="580-b6-2S3" id="vu4-Cu-dwB"/>
                                             <outlet property="companyNameLabel" destination="5ZD-bT-jAU" id="nUN-mY-uba"/>
+                                            <outlet property="contentStackView" destination="zYV-cs-9sc" id="Hfm-1x-DVl"/>
                                             <outlet property="exportCompanyLabel" destination="IMI-qL-axY" id="Dyn-O4-omb"/>
                                             <outlet property="growerNameLabel" destination="LUn-cU-LJu" id="ZIM-MK-aPM"/>
-                                            <outlet property="varietyLabel" destination="GfE-qm-jbB" id="9bi-0j-N8V"/>
+                                            <outlet property="varietyLabel" destination="F5f-D1-UX2" id="aZw-OZ-PG4"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
