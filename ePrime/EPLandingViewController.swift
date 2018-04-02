@@ -53,9 +53,30 @@ class EPLandingViewController: UIViewController {
             {
                 EPAlertHandler.sharedPresenterInstance().showOneButtonAlert(presentingViewController:self,alertMessage: "sorry something went wrong please try again later", alertTitle: "", alertStyle: .default, buttonTitle: "OK", completionBlock: nil)
             }
-            
+
         })
-       
+
+        
+        
+//        EPPackStickerDetails.fetchEPPackStickerDetails(withQRCode: "010440026674100417P0100024") { (data,errorMessage) in
+//            ARSLineProgress.hide()
+//            
+//            if ((data) != nil && errorMessage == nil)
+//            {
+//                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//                let epPackStickerDetailsViewController = storyBoard.instantiateViewController(withIdentifier: "EPPackStickerDetailsViewController") as! EPPackStickerDetailsViewController
+//                epPackStickerDetailsViewController.stickerDetials = data
+//                self.navigationController?.pushViewController(epPackStickerDetailsViewController, animated: true)
+//            }
+//            else  if errorMessage != nil && !(errorMessage!.isEmpty)
+//            {
+//                EPAlertHandler.sharedPresenterInstance().showOneButtonAlert(presentingViewController:self,alertMessage: errorMessage!, alertTitle: "", alertStyle: .default, buttonTitle: "OK", completionBlock: nil)
+//            }
+//            else
+//            {
+//                EPAlertHandler.sharedPresenterInstance().showOneButtonAlert(presentingViewController:self,alertMessage: "sorry something went wrong please try again later", alertTitle: "", alertStyle: .default, buttonTitle: "OK", completionBlock: nil)
+//            }
+//        }
     }
     
     

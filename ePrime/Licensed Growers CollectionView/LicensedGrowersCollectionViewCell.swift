@@ -77,7 +77,7 @@ class LicensedGrowersCollectionViewCell: UICollectionViewCell {
         
         
       
-            bridgeExportCompanyLabel.isHidden = true
+//            bridgeExportCompanyLabel.isHidden = true
 
     }
   

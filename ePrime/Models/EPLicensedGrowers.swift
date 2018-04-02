@@ -50,22 +50,22 @@ class EPLicensedGrowers: Mappable {
             }
             else
             {
-                if let _ = response.result.value
-                {
-                    let error = (response.result.value  as? [String : String])
-                    if let _ = error
-                    {
-                        completionHandler (nil,error!["Message"] ?? nil)
-                    }
-                    else
-                    {
-                        completionHandler (nil,nil)
-                    }
-                }
-                else
-                {
+//                if let _ = response.result.value
+//                {
+//                    let error = (response.result.value  as? [String : String])
+//                    if let _ = error
+//                    {
+//                        completionHandler (nil,error!["Message"] ?? nil)
+//                    }
+//                    else
+//                    {
+//                        completionHandler (nil,nil)
+//                    }
+//                }
+//                else
+//                {
                     completionHandler (nil,nil)
-                }
+//                }
             }
             
     }

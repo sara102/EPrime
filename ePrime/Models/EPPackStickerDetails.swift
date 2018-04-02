@@ -17,10 +17,9 @@ class EPPackStickerDetails: Mappable {
     var PlotNameEn:String?
     var FarmNameEn:String?
     var VarietyNameEn:String?
-    var PackingTypeName:String?
+//    var PackingTypeName:String?
     var PackWeight:Float?
-    var SupplierNameEn:String?
-    var CountryRegionID:Float?
+//    var SupplierNameEn:String?
     var CountryRegionNameEn:String?
     var PlotSize:Float?
     var NoOfTree:Float?
@@ -36,10 +35,9 @@ class EPPackStickerDetails: Mappable {
         PlotNameEn <- map["PlotNameEn"]
         FarmNameEn <- map["FarmNameEn"]
         VarietyNameEn <- map["VarietyNameEn"]
-        PackingTypeName <- map["PackingTypeName"]
+//        PackingTypeName <- map["PackingTypeName"]
         PackWeight <- map["PackWeight"]
-        SupplierNameEn <- map["SupplierNameEn"]
-        CountryRegionID <- map["CountryRegionID"]
+//        SupplierNameEn <- map["SupplierNameEn"]
         CountryRegionNameEn <- map["CountryRegionNameEn"]
         PlotSize <- map["PlotSize"]
         NoOfTree <- map["NoOfTree"]
@@ -57,7 +55,16 @@ class EPPackStickerDetails: Mappable {
                 if let _ = response.result.value
                 {
                     let stickerDetails: EPPackStickerDetails = Mapper<EPPackStickerDetails>().map(JSON:response.result.value as! [String:Any])!
-                    completionHandler (stickerDetails,nil)
+                    if stickerDetails.NoDataMessage != nil && !(stickerDetails.NoDataMessage?.isEmpty)!
+                    {
+                        completionHandler (nil,stickerDetails.NoDataMessage)
+
+                    }
+                    else
+                    {
+                        completionHandler (stickerDetails,nil)
+
+                    }
                 }
                 else
                 {
@@ -65,22 +72,22 @@ class EPPackStickerDetails: Mappable {
                 }
             }
             else {
-                if let _ = response.result.value
-                {
-                    let error = (response.result.value  as? [String : String])
-                    if let _ = error
-                    {
-                        completionHandler (nil,error!["Message"] ?? nil)
-                    }
-                    else
-                    {
-                        completionHandler (nil,nil)
-                    }
-                }
-                else
-                {
+//                if let _ = response.result.value
+//                {
+//                    let error = (response.result.value  as? [String : String])
+//                    if let _ = error
+//                    {
+//                        completionHandler (nil,error!["Message"] ?? nil)
+//                    }
+//                    else
+//                    {
+//                        completionHandler (nil,nil)
+//                    }
+//                }
+//                else
+//                {
                     completionHandler (nil,nil)
-                }
+               // }
         }
 
 

@@ -10,9 +10,10 @@ import UIKit
 
 class EPPackStickerDetailsViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var packageWeightLabel: UILabel!
-    @IBOutlet weak var numberOfTreesLabel: UILabel!
+    @IBOutlet weak var growerLabel: UILabel!
+    @IBOutlet weak var targetMarket: UILabel!
     @IBOutlet weak var FarmNameLabel: UILabel!
+    var keys:[String] = []
     var data = [String: String]()
     var stickerDetials:EPPackStickerDetails?
     
@@ -28,51 +29,51 @@ class EPPackStickerDetailsViewController: UIViewController {
     func normalizeApiDataToUIData () -> Void
     {
         
-        if stickerDetials?.CountryRegionID != nil && stickerDetials?.CountryRegionID?.description != ""
+
+        if (stickerDetials?.FarmNameEn != nil && stickerDetials?.FarmNameEn! != ""  ) && (stickerDetials?.ExportName != nil)
         {
-            data["Country region id"] =  stickerDetials?.CountryRegionID?.description
-        }
-        
-        if stickerDetials?.CountryRegionNameEn != nil && stickerDetials?.CountryRegionNameEn! != ""
-        {
-            data["Country region name"] =  stickerDetials?.CountryRegionNameEn!
-        }
-        
-        if stickerDetials?.ExportName != nil && stickerDetials?.ExportName! != ""
-        {
-            data["Export name"] =  stickerDetials?.ExportName!
-        }
-        
-        if stickerDetials?.GrowerName != nil && stickerDetials?.GrowerName! != ""
-        {
-            data["Grower name"] =  stickerDetials?.GrowerName!
-        }
-        
-        
-        if stickerDetials?.PackingTypeName != nil && stickerDetials?.PackingTypeName! != ""
-        {
-            data["Packing type name"] =  stickerDetials?.PackingTypeName!
-        }
-        
-        if stickerDetials?.PlotName_EN != nil && stickerDetials?.PlotName_EN! != ""
-        {
-            data["Plot name"] =  stickerDetials?.PlotName_EN!
-        }
-        
-        if stickerDetials?.PlotSize != nil && stickerDetials?.PlotSize?.description != ""
-        {
-            data["Plot size"] =  stickerDetials?.PlotSize?.description
-        }
-        
-        if stickerDetials?.SupplierNameEn != nil && stickerDetials?.SupplierNameEn! != ""
-        {
-            data["Supplier name"] =  stickerDetials?.SupplierNameEn!
+            data["Farm Name"] =  stickerDetials?.FarmNameEn!
+            keys.append("Farm Name")
         }
         
         if stickerDetials?.VarietyNameEn != nil && stickerDetials?.VarietyNameEn! != ""
         {
-            data["Variety name"] =  stickerDetials?.VarietyNameEn!
+            data["Variety Name"] =  stickerDetials?.VarietyNameEn!
+            keys.append("Variety Name")
+            
         }
+        
+        if stickerDetials?.PackWeight != nil && stickerDetials?.PackWeight?.description != ""
+        {
+            data["Package Weight"] =  (stickerDetials?.PackWeight?.description)! + " KG"
+            keys.append("Package Weight")
+            
+        }
+        
+        
+        if stickerDetials?.PlotName_EN != nil && stickerDetials?.PlotName_EN! != ""
+        {
+            data["Plot Name"] =  stickerDetials?.PlotName_EN!
+            keys.append("Plot Name")
+
+        }
+        
+        if stickerDetials?.PlotSize != nil && stickerDetials?.PlotSize?.description != ""
+        {
+            data["Plot Size"] =  (stickerDetials?.PlotSize?.description)! + " Feddan"
+            keys.append("Plot Size")
+
+        }
+        if stickerDetials?.NoOfTree != nil && stickerDetials?.NoOfTree?.description != ""
+        {
+            data["Number Of Vines"] =  stickerDetials?.NoOfTree?.description
+            keys.append("Number Of Vines")
+
+        }
+        
+       
+    
+      
 
     }
     func setupUI()-> Void
@@ -91,12 +92,17 @@ class EPPackStickerDetailsViewController: UIViewController {
         self.containerView.layer.borderWidth = 2.0
         self.containerView.layer.borderColor = UIColor.clear.cgColor
      
-       
-       
+       if stickerDetials?.ExportName != nil  && stickerDetials?.ExportName! != ""
+       {
+         self.FarmNameLabel.text = stickerDetials?.ExportName!
+       }
+       else
+       {
+         self.FarmNameLabel.text = stickerDetials?.FarmNameEn ?? ""
+       }
         
-        self.FarmNameLabel.text = stickerDetials?.FarmNameEn ?? ""
-        self.numberOfTreesLabel.text = stickerDetials?.NoOfTree != nil ? stickerDetials?.NoOfTree!.description : ""
-        self.packageWeightLabel.text = stickerDetials?.PackWeight != nil ? stickerDetials?.PackWeight!.description : ""
+        self.targetMarket.text = stickerDetials?.CountryRegionNameEn != nil ? stickerDetials?.CountryRegionNameEn!.description : ""
+        self.growerLabel.text = stickerDetials?.GrowerName != nil ? stickerDetials?.GrowerName! : ""
 
     }
 
@@ -118,8 +124,8 @@ extension EPPackStickerDetailsViewController:UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: "stickerCell") as! EPPackStickerCellTableViewCell
     
         
-        let arr = Array(data.keys)
-        let key = arr[indexPath.row]
+        
+        let key = keys[indexPath.row]
 
         cell.setupCell(key: key , value: data[key]!)
 

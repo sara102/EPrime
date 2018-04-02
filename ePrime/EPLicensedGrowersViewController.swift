@@ -44,7 +44,7 @@ class EPLicensedGrowersViewController: UIViewController {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize.init(width: self.growersCollectionView.frame.size.width-20, height: 150.0)
+        return CGSize.init(width: self.growersCollectionView.frame.size.width-20, height: 120.0)
     }
 
 }
