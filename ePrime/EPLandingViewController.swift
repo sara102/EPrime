@@ -129,7 +129,7 @@ extension EPLandingViewController: QRScannerCodeDelegate {
         self.navigationController?.popViewController(animated: true)
         
         ARSLineProgress.show()
-        EPPackStickerDetails.fetchEPPackStickerDetails(withQRCode: "10440726252590416") { (data,errorMessage) in
+        EPPackStickerDetails.fetchEPPackStickerDetails(withQRCode: result) { (data,errorMessage) in
             ARSLineProgress.hide()
 
             if ((data) != nil && errorMessage == nil)

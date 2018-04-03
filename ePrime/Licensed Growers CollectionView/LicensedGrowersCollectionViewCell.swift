@@ -44,7 +44,6 @@ class LicensedGrowersCollectionViewCell: UICollectionViewCell {
         }
         
         
-        
         if (licensedGrowerItem.company != nil && licensedGrowerItem.company != "")
         {
             companyNameLabel.text = "\(licensedGrowerItem.company ?? "")"
@@ -53,8 +52,6 @@ class LicensedGrowersCollectionViewCell: UICollectionViewCell {
         {
             companyNameLabel.isHidden = true
         }
-        
-        
         
         if (licensedGrowerItem.exportName != nil && licensedGrowerItem.exportName != "")
         {
