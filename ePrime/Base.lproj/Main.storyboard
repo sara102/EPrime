@@ -27,86 +27,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3A-Ma-C8D">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-login" translatesAutoresizingMaskIntoConstraints="NO" id="Oqf-xo-1Zr">
-                                        <rect key="frame" x="88" y="200" width="200" height="48"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="Oqf-xo-1Zr" secondAttribute="height" multiplier="25:6" id="sNR-do-9Q8"/>
-                                        </constraints>
-                                    </imageView>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BLp-k0-rIk">
-                                        <rect key="frame" x="50" y="398" width="276" height="40"/>
-                                        <color key="backgroundColor" red="0.37018716335296631" green="0.58962243795394897" blue="0.093519501388072968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="BTF-AP-iFC"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <state key="normal" title="SCAN QR CODE">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="scanQRCodeButtonAction:" destination="C1j-XT-ec2" eventType="touchUpInside" id="NQj-ry-ssE"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WiF-aQ-aYX">
-                                        <rect key="frame" x="50" y="463" width="276" height="40"/>
-                                        <color key="backgroundColor" red="0.37018716340000002" green="0.58962243800000003" blue="0.093519501389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="0do-Jq-8UZ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <state key="normal" title="LICENSED GROWERS">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="licensedGrowersButtonAction:" destination="C1j-XT-ec2" eventType="touchUpInside" id="T4V-br-5HT"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.97148281849999996" green="0.98426252530000002" blue="0.95763435259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7EI-tR-orR">
+                                <rect key="frame" x="50" y="445.5" width="275" height="40"/>
+                                <color key="backgroundColor" red="0.37018716340000002" green="0.58962243800000003" blue="0.093519501389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="WiF-aQ-aYX" secondAttribute="bottom" constant="100" id="28u-Qb-5ic"/>
-                                    <constraint firstItem="BLp-k0-rIk" firstAttribute="leading" secondItem="O3A-Ma-C8D" secondAttribute="leading" constant="50" id="6TC-Oj-7dx"/>
-                                    <constraint firstAttribute="trailing" secondItem="BLp-k0-rIk" secondAttribute="trailing" constant="50" id="6nh-lz-1tv"/>
-                                    <constraint firstItem="WiF-aQ-aYX" firstAttribute="leading" secondItem="BLp-k0-rIk" secondAttribute="leading" id="9HE-4s-vKC"/>
-                                    <constraint firstItem="BLp-k0-rIk" firstAttribute="top" secondItem="Oqf-xo-1Zr" secondAttribute="bottom" constant="150" id="PEu-CY-OLw"/>
-                                    <constraint firstItem="Oqf-xo-1Zr" firstAttribute="top" secondItem="O3A-Ma-C8D" secondAttribute="top" constant="200" id="Sa3-OL-kru"/>
-                                    <constraint firstAttribute="trailing" secondItem="Oqf-xo-1Zr" secondAttribute="trailing" constant="88" id="Vmq-1A-d7h"/>
-                                    <constraint firstItem="WiF-aQ-aYX" firstAttribute="top" secondItem="BLp-k0-rIk" secondAttribute="bottom" constant="25" id="iyI-Gy-FoR"/>
-                                    <constraint firstItem="Oqf-xo-1Zr" firstAttribute="centerX" secondItem="O3A-Ma-C8D" secondAttribute="centerX" id="lmA-uh-G2u"/>
-                                    <constraint firstItem="BLp-k0-rIk" firstAttribute="centerX" secondItem="Oqf-xo-1Zr" secondAttribute="centerX" id="nkP-jd-y25"/>
-                                    <constraint firstItem="WiF-aQ-aYX" firstAttribute="trailing" secondItem="BLp-k0-rIk" secondAttribute="trailing" id="pwr-uf-udH"/>
+                                    <constraint firstAttribute="height" constant="40" id="Brg-ca-Mar"/>
                                 </constraints>
-                            </scrollView>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="SCAN QR CODE">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="scanQRCodeButtonAction:" destination="C1j-XT-ec2" eventType="touchUpInside" id="6mH-4K-RMD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9d-2X-w0g">
+                                <rect key="frame" x="50" y="510.5" width="275" height="40"/>
+                                <color key="backgroundColor" red="0.37018716340000002" green="0.58962243800000003" blue="0.093519501389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="r5A-hp-qCj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="LICENSED GROWERS">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="licensedGrowersButtonAction:" destination="C1j-XT-ec2" eventType="touchUpInside" id="fCi-Ne-gJJ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-login" translatesAutoresizingMaskIntoConstraints="NO" id="Jaw-Aq-BsR">
+                                <rect key="frame" x="80" y="240" width="215" height="51.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Jaw-Aq-BsR" secondAttribute="height" multiplier="25:6" id="94t-6e-ktq"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.97148281849999996" green="0.98426252530000002" blue="0.95763435259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="O3A-Ma-C8D" firstAttribute="width" secondItem="tOH-8K-tCF" secondAttribute="width" id="7rV-tT-uU6"/>
-                            <constraint firstItem="8Tl-F9-PJW" firstAttribute="trailing" secondItem="O3A-Ma-C8D" secondAttribute="trailing" id="ILD-vf-vZa"/>
-                            <constraint firstItem="O3A-Ma-C8D" firstAttribute="height" secondItem="tOH-8K-tCF" secondAttribute="height" id="fF3-fe-Rkg"/>
-                            <constraint firstItem="O3A-Ma-C8D" firstAttribute="top" secondItem="tOH-8K-tCF" secondAttribute="top" id="ngo-GP-8Gu"/>
+                            <constraint firstItem="Jaw-Aq-BsR" firstAttribute="width" secondItem="Jaw-Aq-BsR" secondAttribute="height" multiplier="25:6" id="9FX-Jf-fnv"/>
+                            <constraint firstItem="I9d-2X-w0g" firstAttribute="trailing" secondItem="7EI-tR-orR" secondAttribute="trailing" id="JZZ-ni-UGE"/>
+                            <constraint firstItem="Jaw-Aq-BsR" firstAttribute="top" secondItem="tOH-8K-tCF" secondAttribute="top" constant="240" id="NdS-1X-D41"/>
+                            <constraint firstItem="8Tl-F9-PJW" firstAttribute="trailing" secondItem="Jaw-Aq-BsR" secondAttribute="trailing" constant="80" id="OhN-by-6j3"/>
+                            <constraint firstItem="7EI-tR-orR" firstAttribute="leading" secondItem="8Tl-F9-PJW" secondAttribute="leading" constant="50" id="TJc-QI-nN5"/>
+                            <constraint firstItem="7EI-tR-orR" firstAttribute="centerX" secondItem="Jaw-Aq-BsR" secondAttribute="centerX" id="W6e-Bo-Ofc"/>
+                            <constraint firstItem="8Tl-F9-PJW" firstAttribute="bottom" secondItem="I9d-2X-w0g" secondAttribute="bottom" constant="116.5" id="dCY-xf-ene"/>
+                            <constraint firstItem="I9d-2X-w0g" firstAttribute="leading" secondItem="7EI-tR-orR" secondAttribute="leading" id="frG-jM-HZC"/>
+                            <constraint firstItem="7EI-tR-orR" firstAttribute="top" secondItem="Jaw-Aq-BsR" secondAttribute="bottom" priority="250" constant="150" id="oHF-r7-rNk"/>
+                            <constraint firstItem="Jaw-Aq-BsR" firstAttribute="leading" secondItem="8Tl-F9-PJW" secondAttribute="leading" constant="80" id="pZc-fB-RRy"/>
+                            <constraint firstItem="8Tl-F9-PJW" firstAttribute="trailing" secondItem="7EI-tR-orR" secondAttribute="trailing" constant="50" id="qne-ta-AcU"/>
+                            <constraint firstItem="I9d-2X-w0g" firstAttribute="top" secondItem="7EI-tR-orR" secondAttribute="bottom" constant="25" id="ssX-kf-cFb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8Tl-F9-PJW"/>
                     </view>
                     <navigationItem key="navigationItem" id="eKr-fP-wE9">
                         <barButtonItem key="backBarButtonItem" title=" " id="t4o-HR-o6c"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="licensedGrowersButton" destination="WiF-aQ-aYX" id="WUM-Vy-gxq"/>
-                        <outlet property="scanQRCodeButton" destination="BLp-k0-rIk" id="bw2-5G-w3J"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YVd-Kc-OpI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -473,7 +458,7 @@ Starlight</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NDe-rd-LHg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-914.39999999999998" y="865.81709145427294"/>
+            <point key="canvasLocation" x="2514" y="907"/>
         </scene>
     </scenes>
     <resources>

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ePrime/EPLandingViewController.swift"
-            timestampString = "544359334.796283"
+            timestampString = "544466317.5170031"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "qrScanner(_:scanDidComplete:)"
             landmarkType = "7">
             <Locations>

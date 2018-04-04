@@ -19,6 +19,15 @@ class EPLandingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.scanQRCodeButton.layer.masksToBounds = true
+//        self.scanQRCodeButton.layer.cornerRadius = self.scanQRCodeButton.frame.width/2.0
+//        self.scanQRCodeButton.layer.borderWidth = 1.0
+//        self.scanQRCodeButton.layer.borderColor = UIColor.init(red: 94/255.0, green: 150/255.0, blue: 24/255.0, alpha: 1.0).cgColor
+//        self.licensedGrowersButton.layer.masksToBounds = true
+//        self.licensedGrowersButton.layer.cornerRadius = self.scanQRCodeButton.frame.width/2.0
+//        self.licensedGrowersButton.layer.borderWidth = 1.0
+//        self.licensedGrowersButton.layer.borderColor = UIColor.init(red: 94/255.0, green: 150/255.0, blue: 24/255.0, alpha: 1.0).cgColor
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     override func viewWillAppear(_ animated: Bool) {
