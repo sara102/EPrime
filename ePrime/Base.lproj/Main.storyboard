@@ -92,6 +92,10 @@
                     <navigationItem key="navigationItem" id="eKr-fP-wE9">
                         <barButtonItem key="backBarButtonItem" title=" " id="t4o-HR-o6c"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="licensedGrowersButton" destination="I9d-2X-w0g" id="amQ-ox-xXG"/>
+                        <outlet property="scanQRCodeButton" destination="7EI-tR-orR" id="SqJ-Pt-xBC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YVd-Kc-OpI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

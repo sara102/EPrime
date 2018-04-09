@@ -36,37 +36,39 @@ class EPLicensedGrowers: Mappable {
     {
         Alamofire.request(kLicensedGrowersURL).responseJSON { (response) in
             
-            if response.response?.statusCode == 200
-            {
-                if let _ = response.result.value
+            switch (response.result) {
+            case .success:
+                if response.response?.statusCode == 200
                 {
-                    let growerslist: Array<EPLicensedGrowers> = Mapper<EPLicensedGrowers>().mapArray(JSONArray: response.result.value as! [[String : Any]])
-                    completionHandler (growerslist,nil)
+                    if let _ = response.result.value
+                    {
+                        let growerslist: Array<EPLicensedGrowers> = Mapper<EPLicensedGrowers>().mapArray(JSONArray: response.result.value as! [[String : Any]])
+                        completionHandler (growerslist,nil)
+                    }
+                    else
+                    {
+                        completionHandler (nil,nil)
+                    }
+                }
+                else
+                {
+                    
+                    completionHandler (nil,nil)
+                }
+                break
+            case .failure(let error):
+                if error._code == NSURLErrorTimedOut {
+                    completionHandler (nil,"No internet connection. Please check you internet connection.")
+
                 }
                 else
                 {
                     completionHandler (nil,nil)
                 }
+                break
             }
-            else
-            {
-//                if let _ = response.result.value
-//                {
-//                    let error = (response.result.value  as? [String : String])
-//                    if let _ = error
-//                    {
-//                        completionHandler (nil,error!["Message"] ?? nil)
-//                    }
-//                    else
-//                    {
-//                        completionHandler (nil,nil)
-//                    }
-//                }
-//                else
-//                {
-                    completionHandler (nil,nil)
-//                }
-            }
+            
+           
             
     }
         

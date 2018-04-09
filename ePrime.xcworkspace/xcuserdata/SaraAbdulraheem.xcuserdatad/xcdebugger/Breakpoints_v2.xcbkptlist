@@ -9,46 +9,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ePrime/EPLandingViewController.swift"
-            timestampString = "544466317.5170031"
+            filePath = "ePrime/Models/EPLicensedGrowers.swift"
+            timestampString = "544555109.1006269"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
-            landmarkName = "qrScanner(_:scanDidComplete:)"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "fetchEPLicensedGrowers(completionHandler:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ePrime.EPLandingViewController.qrScanner(__ObjC.UIViewController, scanDidComplete: Swift.String) -&gt; ()"
-                  moduleName = "ePrime"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/SaraAbdulraheem/Desktop/EPrime/ePrime/EPLandingViewController.swift"
-                  timestampString = "544359335.501552"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "132"
-                  endingLineNumber = "132"
-                  offsetFromSymbolStart = "240">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;ePrime.EPPackStickerDetails&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in ePrime.EPLandingViewController.qrScanner(__ObjC.UIViewController, scanDidComplete: Swift.String) -&gt; ()"
-                  moduleName = "ePrime"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/SaraAbdulraheem/Desktop/EPrime/ePrime/EPLandingViewController.swift"
-                  timestampString = "544359335.5030791"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "133"
-                  endingLineNumber = "133"
-                  offsetFromSymbolStart = "44">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

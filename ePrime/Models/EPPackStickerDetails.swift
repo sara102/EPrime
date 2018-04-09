@@ -17,9 +17,7 @@ class EPPackStickerDetails: Mappable {
     var PlotNameEn:String?
     var FarmNameEn:String?
     var VarietyNameEn:String?
-//    var PackingTypeName:String?
     var PackWeight:Float?
-//    var SupplierNameEn:String?
     var CountryRegionNameEn:String?
     var PlotSize:Float?
     var NoOfTree:Float?
@@ -51,45 +49,47 @@ class EPPackStickerDetails: Mappable {
     {
         let url = kPackStickerURL + withQRCode
         Alamofire.request(url).responseJSON { (response) in
-            if response.response?.statusCode == 200 {
-                if let _ = response.result.value
-                {
-                    let stickerDetails: EPPackStickerDetails = Mapper<EPPackStickerDetails>().map(JSON:response.result.value as! [String:Any])!
-                    if stickerDetails.NoDataMessage != nil && !(stickerDetails.NoDataMessage?.isEmpty)!
+            switch (response.result) {
+            case .success:
+                if response.response?.statusCode == 200 {
+                    if let _ = response.result.value
                     {
-                        completionHandler (nil,stickerDetails.NoDataMessage)
-
+                        let stickerDetails: EPPackStickerDetails = Mapper<EPPackStickerDetails>().map(JSON:response.result.value as! [String:Any])!
+                        if stickerDetails.NoDataMessage != nil && !(stickerDetails.NoDataMessage?.isEmpty)!
+                        {
+                            completionHandler (nil,stickerDetails.NoDataMessage)
+                            
+                        }
+                        else
+                        {
+                            completionHandler (stickerDetails,nil)
+                            
+                        }
                     }
                     else
                     {
-                        completionHandler (stickerDetails,nil)
-
+                        completionHandler (nil,nil)
                     }
+                }
+                else {
+                    
+                    completionHandler (nil,nil)
+                    
+                }
+
+                break
+            case .failure(let error):
+                if error._code == NSURLErrorTimedOut {
+                    completionHandler (nil,"No internet connection. Please check you internet connection.")
+                    
                 }
                 else
                 {
                     completionHandler (nil,nil)
                 }
+                break
             }
-            else {
-//                if let _ = response.result.value
-//                {
-//                    let error = (response.result.value  as? [String : String])
-//                    if let _ = error
-//                    {
-//                        completionHandler (nil,error!["Message"] ?? nil)
-//                    }
-//                    else
-//                    {
-//                        completionHandler (nil,nil)
-//                    }
-//                }
-//                else
-//                {
-                    completionHandler (nil,nil)
-               // }
-        }
-
+           
 
         
         

@@ -16,22 +16,14 @@ class EPLandingViewController: UIViewController {
     @IBOutlet weak var licensedGrowersButton: UIButton!
     
     
-    
+    var didFireDelegateOnce:Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.scanQRCodeButton.layer.masksToBounds = true
-//        self.scanQRCodeButton.layer.cornerRadius = self.scanQRCodeButton.frame.width/2.0
-//        self.scanQRCodeButton.layer.borderWidth = 1.0
-//        self.scanQRCodeButton.layer.borderColor = UIColor.init(red: 94/255.0, green: 150/255.0, blue: 24/255.0, alpha: 1.0).cgColor
-//        self.licensedGrowersButton.layer.masksToBounds = true
-//        self.licensedGrowersButton.layer.cornerRadius = self.scanQRCodeButton.frame.width/2.0
-//        self.licensedGrowersButton.layer.borderWidth = 1.0
-//        self.licensedGrowersButton.layer.borderColor = UIColor.init(red: 94/255.0, green: 150/255.0, blue: 24/255.0, alpha: 1.0).cgColor
-        
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        didFireDelegateOnce = false
 
     }
     override func didReceiveMemoryWarning() {
@@ -45,8 +37,13 @@ class EPLandingViewController: UIViewController {
     @IBAction func licensedGrowersButtonAction(_ sender: Any) {
        
         ARSLineProgress.show()
+        scanQRCodeButton.isEnabled = false
+        licensedGrowersButton.isEnabled = false
+
         EPLicensedGrowers.fetchEPLicensedGrowers(completionHandler: { (data,errorMessage)  in
             ARSLineProgress.hide()
+            self.scanQRCodeButton.isEnabled = true
+            self.licensedGrowersButton.isEnabled = true
             if ( data != nil && errorMessage == nil)
             {
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -60,37 +57,16 @@ class EPLandingViewController: UIViewController {
             }
             else
             {
-                EPAlertHandler.sharedPresenterInstance().showOneButtonAlert(presentingViewController:self,alertMessage: "sorry something went wrong please try again later", alertTitle: "", alertStyle: .default, buttonTitle: "OK", completionBlock: nil)
+                EPAlertHandler.sharedPresenterInstance().showOneButtonAlert(presentingViewController:self,alertMessage: "Sorry something went wrong please try again later", alertTitle: "", alertStyle: .default, buttonTitle: "OK", completionBlock: nil)
             }
 
         })
 
-        
-        
-//        EPPackStickerDetails.fetchEPPackStickerDetails(withQRCode: "010440026674100417P0100024") { (data,errorMessage) in
-//            ARSLineProgress.hide()
-//            
-//            if ((data) != nil && errorMessage == nil)
-//            {
-//                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//                let epPackStickerDetailsViewController = storyBoard.instantiateViewController(withIdentifier: "EPPackStickerDetailsViewController") as! EPPackStickerDetailsViewController
-//                epPackStickerDetailsViewController.stickerDetials = data
-//                self.navigationController?.pushViewController(epPackStickerDetailsViewController, animated: true)
-//            }
-//            else  if errorMessage != nil && !(errorMessage!.isEmpty)
-//            {
-//                EPAlertHandler.sharedPresenterInstance().showOneButtonAlert(presentingViewController:self,alertMessage: errorMessage!, alertTitle: "", alertStyle: .default, buttonTitle: "OK", completionBlock: nil)
-//            }
-//            else
-//            {
-//                EPAlertHandler.sharedPresenterInstance().showOneButtonAlert(presentingViewController:self,alertMessage: "sorry something went wrong please try again later", alertTitle: "", alertStyle: .default, buttonTitle: "OK", completionBlock: nil)
-//            }
-//        }
     }
     
     
     @IBAction func scanQRCodeButtonAction(_ sender: Any) {
-        
+      
         let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatus(for:.video)
         
         switch cameraAuthorizationStatus {
@@ -135,28 +111,37 @@ class EPLandingViewController: UIViewController {
 extension EPLandingViewController: QRScannerCodeDelegate {
     
     func qrScanner(_ controller: UIViewController, scanDidComplete result: String) {
-        self.navigationController?.popViewController(animated: true)
-        
-        ARSLineProgress.show()
-        EPPackStickerDetails.fetchEPPackStickerDetails(withQRCode: result) { (data,errorMessage) in
-            ARSLineProgress.hide()
-
-            if ((data) != nil && errorMessage == nil)
-            {
-                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let epPackStickerDetailsViewController = storyBoard.instantiateViewController(withIdentifier: "EPPackStickerDetailsViewController") as! EPPackStickerDetailsViewController
-                epPackStickerDetailsViewController.stickerDetials = data
-                self.navigationController?.pushViewController(epPackStickerDetailsViewController, animated: true)
-            }
-            else  if errorMessage != nil && !(errorMessage!.isEmpty)
-            {
-                EPAlertHandler.sharedPresenterInstance().showOneButtonAlert(presentingViewController:self,alertMessage: errorMessage!, alertTitle: "", alertStyle: .default, buttonTitle: "OK", completionBlock: nil)
-            }
-            else
-            {
-                EPAlertHandler.sharedPresenterInstance().showOneButtonAlert(presentingViewController:self,alertMessage: "sorry something went wrong please try again later", alertTitle: "", alertStyle: .default, buttonTitle: "OK", completionBlock: nil)
+        if didFireDelegateOnce == false
+        {
+            didFireDelegateOnce  = true
+            self.navigationController?.popViewController(animated: true)
+            
+            ARSLineProgress.show()
+            scanQRCodeButton.isEnabled = false
+            licensedGrowersButton.isEnabled = false
+            EPPackStickerDetails.fetchEPPackStickerDetails(withQRCode: result) { (data,errorMessage) in
+                
+                ARSLineProgress.hide()
+                self.scanQRCodeButton.isEnabled = true
+                self.licensedGrowersButton.isEnabled = true
+                if ((data) != nil && errorMessage == nil)
+                {
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let epPackStickerDetailsViewController = storyBoard.instantiateViewController(withIdentifier: "EPPackStickerDetailsViewController") as! EPPackStickerDetailsViewController
+                    epPackStickerDetailsViewController.stickerDetials = data
+                    self.navigationController?.pushViewController(epPackStickerDetailsViewController, animated: true)
+                }
+                else  if errorMessage != nil && !(errorMessage!.isEmpty)
+                {
+                    EPAlertHandler.sharedPresenterInstance().showOneButtonAlert(presentingViewController:self,alertMessage: errorMessage!, alertTitle: "", alertStyle: .default, buttonTitle: "OK", completionBlock: nil)
+                }
+                else
+                {
+                    EPAlertHandler.sharedPresenterInstance().showOneButtonAlert(presentingViewController:self,alertMessage: "Sorry something went wrong please try again later", alertTitle: "", alertStyle: .default, buttonTitle: "OK", completionBlock: nil)
+                }
             }
         }
+     
     }
     
     func qrScannerDidFail(_ controller: UIViewController, error: String) {
